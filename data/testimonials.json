@@ -1,12 +1,17 @@
 [
   {
-    "quote": "Packed every week. Best quiz in the North East.",
+    "quote": "Packed every week \u2014 best quiz in the North East.",
     "name": "Venue Manager",
     "venue": "Kennedy's"
   },
   {
     "quote": "Brilliant energy, top-quality rounds.",
     "name": "Regular",
-    "venue": "Wandsworth"
+    "venue": "Whitley Bay"
+  },
+  {
+    "quote": "Midweek trade booster. Our locals love it.",
+    "name": "Landlord",
+    "venue": "North Tyneside"
   }
 ]

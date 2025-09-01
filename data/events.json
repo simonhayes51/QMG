@@ -1,23 +1,47 @@
 [
   {
-    "title": "Quiz Night at Kennedy's",
-    "venue": "Kennedy's",
+    "title": "Quiz Night",
+    "date": "2025-09-01",
+    "time": "20:00",
+    "venue": "The Quarry",
+    "town": "Whitley Bay",
+    "type": "Quiz",
+    "url": "/whats-on"
+  },
+  {
+    "title": "Music Bingo",
+    "date": "2025-09-02",
+    "time": "20:30",
+    "venue": "Three Sails Sports Bar",
     "town": "North Shields",
-    "day": "Thursday",
-    "time": "8:00pm"
+    "type": "Bingo",
+    "url": "/whats-on"
   },
   {
-    "title": "Music Bingo at The Rattler",
-    "venue": "The Rattler",
-    "town": "Tyneside",
-    "day": "Tuesday",
-    "time": "8:30pm"
+    "title": "Themed Quiz: 90s Night",
+    "date": "2025-09-03",
+    "time": "20:00",
+    "venue": "Old Fat Ox",
+    "town": "Whitley Bay",
+    "type": "Quiz",
+    "url": "/whats-on"
   },
   {
-    "title": "General Knowledge at The Ship",
-    "venue": "The Ship",
+    "title": "Weekly Pub Quiz",
+    "date": "2025-09-04",
+    "time": "20:00",
+    "venue": "Northumberland Golf Club",
     "town": "Newcastle",
-    "day": "Wednesday",
-    "time": "8:00pm"
+    "type": "Quiz",
+    "url": "/whats-on"
+  },
+  {
+    "title": "Friday Big Quiz",
+    "date": "2025-09-05",
+    "time": "20:30",
+    "venue": "The Exchange",
+    "town": "North Shields",
+    "type": "Quiz",
+    "url": "/whats-on"
   }
 ]

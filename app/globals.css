@@ -2,32 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light dark;
-}
+:root { --blue:#0A1F44; --red:#C8102E; --cream:#F5F1E8; --white:#FFFFFF; color-scheme: light; }
+body { @apply bg-[color:var(--cream)] text-[color:var(--blue)] antialiased; }
+.container-pad { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+.card { @apply rounded-xl border bg-white shadow-card; border-color: rgba(10,31,68,.12); }
+.btn { @apply inline-flex items-center justify-center rounded-md px-5 py-3 font-semibold tracking-wide transition; }
+.btn-primary { background: var(--red); color: var(--white); }
+.btn-primary:hover { filter: brightness(.95); }
+.btn-ghost { @apply border; border-color: rgba(10,31,68,.25); }
+.btn-ghost:hover { border-color: rgba(10,31,68,.45); }
 
-html, body {
-  height: 100%;
+.roundel { width: 36px; height: 36px; border-radius: 9999px;
+  background: radial-gradient(circle at center, var(--red) 0 22%, transparent 22%),
+              radial-gradient(circle at center, var(--white) 0 46%, transparent 46%),
+              radial-gradient(circle at center, var(--blue) 0 100%, transparent 100%);
 }
+.hero-stripe {
+  background: linear-gradient( to bottom, rgba(255,255,255,.72), rgba(255,255,255,.72) ),
+              repeating-linear-gradient(90deg,#0A1F44 0 14px,#FFFFFF 14px 28px,#C8102E 28px 42px,#FFFFFF 42px 56px);
+}
+.section-tag { @apply text-xs uppercase tracking-[0.2em] font-bold; color: rgba(10,31,68,.7); }
+.badge { @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-semibold; }
+.badge-red { background: rgba(200,16,46,.12); color: #C8102E; }
+.badge-blue { background: rgba(10,31,68,.1); color: #0A1F44; }
 
-body {
-  @apply bg-ink text-white antialiased;
-}
-
-.container-pad {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-.btn {
-  @apply inline-flex items-center justify-center rounded-md px-5 py-3 font-medium;
-}
-.btn-primary {
-  @apply bg-brand text-black hover:bg-brand-600 transition;
-}
-.btn-ghost {
-  @apply border border-white/20 hover:border-white/40;
-}
-
-.card {
-  @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur;
-}
+.marquee { display:flex; gap:2rem; overflow:hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee-track { display:flex; gap:2rem; animation: scroll 30s linear infinite; }
+@keyframes scroll { from{ transform: translateX(0) } to { transform: translateX(-50%) } }

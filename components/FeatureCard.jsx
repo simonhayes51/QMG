@@ -1,1 +1,1 @@
-export default function FeatureCard({title,desc,icon='🎯'}){return(<div className='glass p-6'><div className='text-3xl'>{icon}</div><h3 className='mt-3 font-semibold'>{title}</h3><p className='mt-2 opacity-80'>{desc}</p></div>);}
+export default function FeatureCard({ title, desc, icon='🎯' }){return(<div className='glass p-6'><div className='text-3xl'>{icon}</div><h3 className='mt-3 font-semibold'>{title}</h3><p className='mt-2 opacity-80'>{desc}</p></div>);}

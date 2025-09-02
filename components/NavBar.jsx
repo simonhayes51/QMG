@@ -1,1 +1,33 @@
-"use client";import Link from 'next/link';import {useEffect,useState} from 'react';import ThemeToggle from './ThemeToggle';const items=[{href:'/whats-on',label:"What's On"},{href:'/calendar',label:'Calendar'},{href:'/services',label:'Services'},{href:'/venues',label:'Venues'},{href:'/team',label:'Team'},{href:'/reviews',label:'Reviews'},{href:'/pricing',label:'Pricing'},{href:'/faq',label:'FAQ'},{href:'/contact',label:'Contact'}];export default function NavBar(){const [scrolled,setScrolled]=useState(false);useEffect(()=>{const onScroll=()=>setScrolled(window.scrollY>10);onScroll();window.addEventListener('scroll',onScroll);return()=>window.removeEventListener('scroll',onScroll)},[]);return(<header className={`fixed top-0 inset-x-0 z-50 transition ${scrolled?'bg-[rgba(10,15,26,.55)] backdrop-blur border-b border-white/10':'bg-transparent'}`}><div className='container-pad flex h-16 items-center justify-between'><Link href='/' className='flex items-center gap-3 no-underline'><div className='roundel'/><span className='font-semibold tracking-wide'>The Quizmaster General</span></Link><nav className='hidden xl:flex items-center gap-6'>{items.map(i=><Link key={i.href} href={i.href} className='hover:opacity-90 no-underline'>{i.label}</Link>)}<ThemeToggle/><Link href='/contact' className='btn btn-primary no-underline'>Book a Quiz</Link></nav></div></header>);}
+"use client";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import ThemeToggle from "./ThemeToggle";
+const items=[
+  {href:"/whats-on",label:"What's On"},
+  {href:"/calendar",label:"Calendar"},
+  {href:"/services",label:"Services"},
+  {href:"/venues",label:"Venues"},
+  {href:"/team",label:"Team"},
+  {href:"/reviews",label:"Reviews"},
+  {href:"/pricing",label:"Pricing"},
+  {href:"/faq",label:"FAQ"},
+  {href:"/contact",label:"Contact"}
+];
+export default function NavBar(){
+  const [scrolled,setScrolled]=useState(false);
+  useEffect(()=>{ const onScroll=()=>setScrolled(window.scrollY>10); onScroll(); window.addEventListener("scroll",onScroll); return()=>window.removeEventListener("scroll",onScroll); },[]);
+  return (
+    <header className={`fixed top-0 inset-x-0 z-50 transition ${scrolled? "bg-[rgba(10,15,26,.55)] backdrop-blur border-b border-white/10":"bg-transparent"}`}>
+      <div className="container-pad flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 no-underline">
+          <div className="roundel"/><span className="font-semibold tracking-wide">The Quizmaster General</span>
+        </Link>
+        <nav className="hidden xl:flex items-center gap-6">
+          {items.map(i=> <Link key={i.href} href={i.href} className="hover:opacity-90 no-underline">{i.label}</Link>)}
+          <ThemeToggle />
+          <Link href="/contact" className="btn btn-primary no-underline">Book a Quiz</Link>
+        </nav>
+      </div>
+    </header>
+  );
+}

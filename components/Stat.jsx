@@ -1,0 +1,1 @@
+export default function Stat({kicker,value,sub}){return(<div className='glass p-6 text-center'><div className='text-xs tracking-widest opacity-70'>{kicker}</div><div className='text-4xl font-extrabold mt-2' style={{fontFamily:'var(--font-display)'}}>{value}</div><div className='opacity-70 mt-1'>{sub}</div></div>);}

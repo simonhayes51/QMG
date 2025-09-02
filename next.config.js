@@ -1,1 +1,1 @@
-module.exports = { images: { unoptimized: true } };
+module.exports={output:'export',images:{unoptimized:true}};
